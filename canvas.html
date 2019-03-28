@@ -29,10 +29,8 @@
     window.addEventListener('keyup', sizePen, false);
     window.addEventListener('change', pickColor, false);
     window.addEventListener('keyup', clearCanvas, false);
-    window.addEventListener('orientationchange', () => {
-      clearCanvas();
-      sizeCanvas();
-    });
+    window.addEventListener('orientationchange', clearCanvas, false);
+    window.addEventListener('orientationchange', sizeCanvas, false);
 
     function draw(e){
         var pageX=e.pageX;
