@@ -29,7 +29,7 @@
     window.addEventListener('keyup', sizePen, false);
     window.addEventListener('change', pickColor, false);
     window.addEventListener('keyup', clearCanvas, false);
-    window.addEventListener('orientationchange', function(){location.reload();}, false);
+    window.addEventListener('orientationchange', orientCanvas, false);
 
     function draw(e){
         var pageX=e.pageX;
@@ -82,6 +82,9 @@
     function sizeCanvas(e){
       c.width=window.innerWidth * 0.80;
       c.height=window.innerHeight * 0.80;
+    }
+    function orientCanvas(e){
+      window.location.reload();
     }
   </script>
 
